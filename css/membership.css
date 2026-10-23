@@ -1,0 +1,402 @@
+
+/* GymFit Membership Page */
+
+:root {
+    --member-orange: #ff6b00;
+    --member-card: #191919;
+    --member-muted: #b7b7b7;
+}
+
+body {
+    background: #0b0b0b;
+    color: #ffffff;
+}
+
+.text-orange {
+    color: var(--member-orange) !important;
+}
+
+/* Hero */
+.membership-hero {
+    padding: 85px 20px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.92)),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=80")
+        center/cover no-repeat;
+}
+
+.section-tag {
+    display: inline-block;
+    color: var(--member-orange);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.membership-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 850;
+    margin-bottom: 16px;
+}
+
+.membership-hero h1 span,
+.membership-heading h2 span {
+    color: var(--member-orange);
+}
+
+.membership-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #d0d0d0;
+    line-height: 1.7;
+}
+
+.btn-orange {
+    background: var(--member-orange);
+    border: 1px solid var(--member-orange);
+    color: #ffffff;
+    padding: 12px 22px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.btn-orange:hover {
+    background: #e85f00;
+    border-color: #e85f00;
+    color: #ffffff;
+}
+
+/* Section heading */
+.membership-heading {
+    margin-bottom: 35px;
+}
+
+.membership-heading h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 850;
+    margin-bottom: 12px;
+}
+
+.membership-heading > p {
+    color: var(--member-muted);
+}
+
+.demo-notice {
+    font-size: 0.85rem;
+    color: #dddddd !important;
+    margin-top: 12px;
+}
+
+/* Plan cards */
+.membership-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 32px 26px 26px;
+    background: var(--member-card);
+    border: 1px solid #333333;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.membership-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--member-orange);
+}
+
+.featured-plan {
+    border: 2px solid var(--member-orange);
+    background: linear-gradient(160deg, #24170f, #191919 45%);
+}
+
+.popular-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 14px;
+    background: var(--member-orange);
+    color: #ffffff;
+    border-bottom-left-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.plan-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 20px;
+    background: rgba(255, 107, 0, 0.13);
+    color: var(--member-orange);
+    border-radius: 12px;
+    font-size: 1.7rem;
+}
+
+.membership-card h3 {
+    font-size: 1.65rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.plan-description {
+    color: var(--member-muted);
+    min-height: 25px;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin: 20px 0;
+    font-size: 2.7rem;
+    font-weight: 850;
+}
+
+.price .currency {
+    font-size: 1.6rem;
+}
+
+.price small {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--member-muted);
+}
+
+.plan-divider {
+    height: 1px;
+    background: #333333;
+    margin-bottom: 20px;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    flex: 1;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 16px;
+    color: #e0e0e0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.plan-features i {
+    color: var(--member-orange);
+    margin-top: 2px;
+}
+
+.plan-features .unavailable {
+    color: #777777;
+}
+
+.plan-features .unavailable i {
+    color: #777777;
+}
+
+.btn-plan {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--member-orange);
+    color: var(--member-orange);
+    border-radius: 6px;
+    font-weight: 750;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-plan:hover,
+.featured-plan .btn-plan {
+    background: var(--member-orange);
+    color: #ffffff;
+}
+
+.featured-plan .btn-plan:hover {
+    background: #e85f00;
+}
+
+/* Benefits */
+.benefits-section {
+    background: #121212;
+    border-top: 1px solid #252525;
+    border-bottom: 1px solid #252525;
+}
+
+.benefit-card {
+    height: 100%;
+    padding: 25px;
+    background: #1a1a1a;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--member-orange);
+}
+
+.benefit-card > i {
+    display: inline-block;
+    color: var(--member-orange);
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.benefit-card h4 {
+    font-size: 1.15rem;
+    font-weight: 750;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: var(--member-muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Modals */
+.membership-modal {
+    background: #191919;
+    color: #ffffff;
+    border: 1px solid #383838;
+    border-radius: 12px;
+}
+
+.membership-modal .modal-header {
+    border-bottom: 1px solid #333333;
+}
+
+.membership-modal .modal-title {
+    font-weight: 800;
+}
+
+.modal-intro {
+    color: var(--member-muted);
+    line-height: 1.6;
+}
+
+.selected-plan {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px;
+    margin-bottom: 22px;
+    background: #101010;
+    border: 1px solid #343434;
+    border-left: 3px solid var(--member-orange);
+    border-radius: 7px;
+}
+
+.selected-plan span {
+    color: var(--member-muted);
+    font-size: 0.85rem;
+}
+
+.selected-plan strong:last-child {
+    color: var(--member-orange);
+    font-size: 1.15rem;
+}
+
+.membership-modal .form-label {
+    color: #eeeeee;
+    font-weight: 600;
+}
+
+.membership-modal .form-control {
+    min-height: 46px;
+    background: #101010;
+    border: 1px solid #3c3c3c;
+    color: #ffffff;
+}
+
+.membership-modal .form-control:focus {
+    border-color: var(--member-orange);
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 0, 0.15);
+}
+
+.membership-modal .form-control::placeholder {
+    color: #888888;
+}
+
+.membership-error {
+    color: #ff8585;
+    font-size: 0.9rem;
+}
+
+.modal-note {
+    color: #aaaaaa;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.confirmation-icon {
+    color: #43cc88;
+    font-size: 3.2rem;
+    margin: 8px 0 15px;
+}
+
+.confirmation-message {
+    color: #dddddd;
+    line-height: 1.7;
+}
+
+/* Footer */
+.site-footer {
+    background: #050505;
+    border-top: 1px solid #252525;
+    padding: 35px 15px 20px;
+}
+
+.footer-brand {
+    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.site-footer p {
+    color: #aaaaaa;
+    margin-top: 10px;
+}
+
+.site-footer .copyright {
+    font-size: 0.85rem;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .membership-hero {
+        padding: 65px 15px;
+    }
+
+    .membership-card {
+        padding: 27px 22px 22px;
+    }
+
+    .price {
+        font-size: 2.35rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

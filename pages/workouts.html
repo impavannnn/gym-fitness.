@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workouts | GymFit</title>
+    <meta name="description" content="Explore chest, back, leg, shoulder and arm exercises with GymFit.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Workouts CSS -->
+    <link rel="stylesheet" href="../css/workouts.css">
+</head>
+
+<body id="top">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top gym-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            GYM<span>FIT</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                       href="workouts.html">Workouts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="planner.html">Planner</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculator.html">BMI Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="membership.html">Membership</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-orange ms-lg-2"
+                       href="membership.html">Join Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="workout-hero">
+    <div class="container">
+        <p class="section-label">
+            <i class="bi bi-lightning-charge-fill"></i>
+            YOUR TRAINING STARTS HERE
+        </p>
+
+        <h1>EXPLORE YOUR <span>WORKOUTS</span></h1>
+
+        <p>
+            Find your focus, choose your exercises, and build a consistent
+            training routine with GymFit.
+        </p>
+
+        <div class="workout-summary">
+            <div>
+                <i class="bi bi-grid-3x3-gap-fill"></i>
+                <span><strong id="exerciseCount">12</strong> Exercises</span>
+            </div>
+            <div>
+                <i class="bi bi-bullseye"></i>
+                <span>5 Muscle Groups</span>
+            </div>
+            <div>
+                <i class="bi bi-clock"></i>
+                <span>Beginner Friendly</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- WORKOUT LIBRARY -->
+<main class="section-padding workout-library">
+    <div class="container">
+
+        <div class="workout-toolbar">
+            <div>
+                <p class="section-label">WORKOUT LIBRARY</p>
+                <h2>FIND YOUR <span>EXERCISE</span></h2>
+            </div>
+
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="search" id="exerciseSearch"
+                       placeholder="Search exercises..."
+                       aria-label="Search exercises">
+            </div>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="filter-buttons" role="group" aria-label="Filter exercises">
+            <button class="filter-btn active" data-filter="all"
+                    aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="chest"
+                    aria-pressed="false">Chest</button>
+            <button class="filter-btn" data-filter="back"
+                    aria-pressed="false">Back</button>
+            <button class="filter-btn" data-filter="legs"
+                    aria-pressed="false">Legs</button>
+            <button class="filter-btn" data-filter="shoulders"
+                    aria-pressed="false">Shoulders</button>
+            <button class="filter-btn" data-filter="arms"
+                    aria-pressed="false">Arms</button>
+        </div>
+
+        <!-- EXERCISE CARDS -->
+        <div class="row g-4 mt-2" id="exerciseGrid">
+
+            <!-- CHEST -->
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="chest">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80"
+                         alt="Gym equipment for chest training" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">CHEST</span>
+                        <h3>Bench Press</h3>
+                        <p>A compound exercise for developing chest strength.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 8–12 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Intermediate</span>
+                            <button class="details-btn" data-exercise="bench-press">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="chest">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80"
+                         alt="Dumbbells for strength training" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">CHEST</span>
+                        <h3>Dumbbell Press</h3>
+                        <p>Train the chest with dumbbells and controlled movement.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 8–12 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Beginner</span>
+                            <button class="details-btn" data-exercise="dumbbell-press">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="chest">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=800&q=80"
+                         alt="Strength training in a gym" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">CHEST</span>
+                        <h3>Push-Ups</h3>
+                        <p>A bodyweight exercise for chest, shoulders, and triceps.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 8–15 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Beginner</span>
+                            <button class="details-btn" data-exercise="push-ups">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- BACK -->
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="back">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
+                         alt="Weight training exercise" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">BACK</span>
+                        <h3>Lat Pulldown</h3>
+                        <p>Target the back muscles using a cable machine.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 10–12 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Beginner</span>
+                            <button class="details-btn" data-exercise="lat-pulldown">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="back">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1534368270820-9de3d8053204?auto=format&fit=crop&w=800&q=80"
+                         alt="Gym strength workout" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">BACK</span>
+                        <h3>Seated Cable Row</h3>
+                        <p>Build back strength with a controlled rowing movement.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 10–12 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Intermediate</span>
+                            <button class="details-btn" data-exercise="cable-row">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="back">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1598971639058-fab3c3109a00?auto=format&fit=crop&w=800&q=80"
+                         alt="Athlete performing strength training" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">BACK</span>
+                        <h3>Pull-Ups</h3>
+                        <p>A bodyweight movement for the upper back and lats.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 5–10 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Advanced</span>
+                            <button class="details-btn" data-exercise="pull-ups">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- LEGS -->
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="legs">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=800&q=80"
+                         alt="Gym training equipment" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">LEGS</span>
+                        <h3>Barbell Squat</h3>
+                        <p>A compound exercise for the quads and glutes.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 6–10 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Intermediate</span>
+                            <button class="details-btn" data-exercise="squat">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="legs">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1534368270820-9de3d8053204?auto=format&fit=crop&w=800&q=80"
+                         alt="Lower body strength training" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">LEGS</span>
+                        <h3>Romanian Deadlift</h3>
+                        <p>Train the hamstrings and glutes with a hip hinge.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 8–12 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Intermediate</span>
+                            <button class="details-btn" data-exercise="romanian-deadlift">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="legs">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80"
+                         alt="Dumbbells used in gym training" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">LEGS</span>
+                        <h3>Walking Lunges</h3>
+                        <p>Improve leg strength, balance, and coordination.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 10 each leg</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Beginner</span>
+                            <button class="details-btn" data-exercise="lunges">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- SHOULDERS -->
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="shoulders">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
+                         alt="Strength training with weights" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">SHOULDERS</span>
+                        <h3>Shoulder Press</h3>
+                        <p>Develop shoulder strength with an overhead press.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 8–12 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Beginner</span>
+                            <button class="details-btn" data-exercise="shoulder-press">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="shoulders">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80"
+                         alt="Gym equipment" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">SHOULDERS</span>
+                        <h3>Lateral Raises</h3>
+                        <p>Focus on the side deltoids using light dumbbells.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 12–15 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Beginner</span>
+                            <button class="details-btn" data-exercise="lateral-raises">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- ARMS -->
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="arms">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80"
+                         alt="Dumbbells for arm exercises" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">ARMS</span>
+                        <h3>Dumbbell Curl</h3>
+                        <p>Strengthen the biceps using controlled curls.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 10–12 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Beginner</span>
+                            <button class="details-btn" data-exercise="dumbbell-curl">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 exercise-item" data-category="arms">
+                <article class="exercise-card">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
+                         alt="Gym weight training equipment" loading="lazy">
+                    <div class="exercise-info">
+                        <span class="exercise-category">ARMS</span>
+                        <h3>Triceps Pushdown</h3>
+                        <p>Train the triceps using a cable attachment.</p>
+                        <div class="exercise-meta">
+                            <span><i class="bi bi-layers"></i> 3 sets</span>
+                            <span><i class="bi bi-arrow-repeat"></i> 10–15 reps</span>
+                        </div>
+                        <div class="exercise-bottom">
+                            <span class="difficulty">Beginner</span>
+                            <button class="details-btn" data-exercise="triceps-pushdown">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+        <div id="noResults" class="no-results d-none">
+            <i class="bi bi-search"></i>
+            <h3>No exercises found</h3>
+            <p>Try another search term or choose a different category.</p>
+        </div>
+
+    </div>
+</main>
+
+<!-- EXERCISE DETAILS MODAL -->
+<div class="modal fade" id="exerciseModal" tabindex="-1"
+     aria-labelledby="exerciseModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content exercise-modal">
+            <div class="modal-header">
+                <div>
+                    <p class="section-label mb-1" id="modalCategory">WORKOUT</p>
+                    <h2 class="modal-title fs-4" id="exerciseModalTitle">
+                        Exercise Details
+                    </h2>
+                </div>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <p id="modalDescription"></p>
+
+                <div class="modal-stats">
+                    <div>
+                        <span>SETS</span>
+                        <strong id="modalSets">3</strong>
+                    </div>
+                    <div>
+                        <span>REPS</span>
+                        <strong id="modalReps">10–12</strong>
+                    </div>
+                    <div>
+                        <span>LEVEL</span>
+                        <strong id="modalLevel">Beginner</strong>
+                    </div>
+                </div>
+
+                <h3 class="h6 mt-4">Training tip</h3>
+                <p class="mb-0" id="modalTip">
+                    Use controlled movements and appropriate weights.
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-orange" data-bs-dismiss="modal">
+                    Got It
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="gym-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-5">
+                <a class="navbar-brand fw-bold" href="../index.html">
+                    GYM<span>FIT</span>
+                </a>
+                <p class="footer-description mt-3">
+                    Train smart. Stay consistent. Become stronger.
+                </p>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <h5>Quick Links</h5>
+                <a href="../index.html">Home</a>
+                <a href="workouts.html">Workouts</a>
+                <a href="planner.html">Planner</a>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <h5>Explore More</h5>
+                <a href="calculator.html">BMI Calculator</a>
+                <a href="membership.html">Membership</a>
+                <a href="../index.html#about">About GymFit</a>
+            </div>
+        </div>
+
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> GymFit. College frontend project.</p>
+            <a href="#top" class="back-to-top">
+                Back to top <i class="bi bi-arrow-up"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Shared JavaScript -->
+<script src="../js/main.js"></script>
+
+<!-- Workout JavaScript -->
+<script src="../js/workouts.js"></script>
+
+</body>
+</html>

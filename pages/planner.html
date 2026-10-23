@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Planner | GymFit</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/planner.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            GYM<span class="text-orange">FIT</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="workouts.html">Workouts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="planner.html">Planner</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculator.html">Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="membership.html">Membership</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="planner-hero">
+    <div class="container text-center">
+        <span class="section-tag">PLAN YOUR TRAINING</span>
+        <h1>Your Weekly <span>Workout Planner</span></h1>
+        <p>Build consistency, complete your sessions, and track your progress.</p>
+        <a href="#weekly-plan" class="btn btn-orange mt-3">
+            View My Plan <i class="bi bi-arrow-down ms-1"></i>
+        </a>
+    </div>
+</header>
+
+<!-- Progress -->
+<section class="container planner-summary py-4">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="summary-card">
+                <div class="summary-icon"><i class="bi bi-calendar-week"></i></div>
+                <div>
+                    <p>Total Workouts</p>
+                    <h3 id="totalWorkouts">7</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="summary-card">
+                <div class="summary-icon"><i class="bi bi-check-circle"></i></div>
+                <div>
+                    <p>Completed</p>
+                    <h3 id="completedWorkouts">0</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="summary-card">
+                <div class="summary-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                <div>
+                    <p>Weekly Progress</p>
+                    <h3 id="progressText">0%</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-area mt-4">
+        <div class="d-flex justify-content-between mb-2">
+            <span>Weekly goal</span>
+            <span id="progressLabel">0 of 7 completed</span>
+        </div>
+        <div class="progress" role="progressbar"
+             aria-label="Weekly workout progress"
+             aria-valuemin="0" aria-valuemax="100"
+             aria-valuenow="0" id="progressContainer">
+            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Weekly Plan -->
+<section class="container py-5" id="weekly-plan">
+    <div class="section-heading">
+        <div>
+            <span class="section-tag">YOUR ROUTINE</span>
+            <h2>Weekly Training <span>Schedule</span></h2>
+            <p>Mark a session complete when you finish your workout.</p>
+        </div>
+        <button class="btn btn-outline-orange" id="resetPlan">
+            <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Week
+        </button>
+    </div>
+
+    <div class="row g-4" id="workoutGrid">
+
+        <div class="col-md-6 col-lg-4">
+            <article class="day-card" data-day="Monday">
+                <div class="day-top">
+                    <span class="day-name">MONDAY</span>
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+                <h3>Chest & Triceps</h3>
+                <p>Build upper-body pushing strength.</p>
+                <div class="workout-meta">
+                    <span><i class="bi bi-clock"></i> 45–60 min</span>
+                    <span><i class="bi bi-fire"></i> Upper body</span>
+                </div>
+                <ul>
+                    <li>Bench Press</li>
+                    <li>Incline Dumbbell Press</li>
+                    <li>Triceps Pushdown</li>
+                </ul>
+                <button class="btn btn-complete complete-btn" data-day="Monday">
+                    <i class="bi bi-check2-circle me-1"></i> Mark Complete
+                </button>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <article class="day-card" data-day="Tuesday">
+                <div class="day-top">
+                    <span class="day-name">TUESDAY</span>
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+                <h3>Back & Biceps</h3>
+                <p>Train your back and pulling muscles.</p>
+                <div class="workout-meta">
+                    <span><i class="bi bi-clock"></i> 45–60 min</span>
+                    <span><i class="bi bi-fire"></i> Upper body</span>
+                </div>
+                <ul>
+                    <li>Lat Pulldown</li>
+                    <li>Seated Cable Row</li>
+                    <li>Dumbbell Curl</li>
+                </ul>
+                <button class="btn btn-complete complete-btn" data-day="Tuesday">
+                    <i class="bi bi-check2-circle me-1"></i> Mark Complete
+                </button>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <article class="day-card" data-day="Wednesday">
+                <div class="day-top">
+                    <span class="day-name">WEDNESDAY</span>
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+                <h3>Legs – Quads</h3>
+                <p>Focus on quadriceps and leg strength.</p>
+                <div class="workout-meta">
+                    <span><i class="bi bi-clock"></i> 50–65 min</span>
+                    <span><i class="bi bi-fire"></i> Lower body</span>
+                </div>
+                <ul>
+                    <li>Barbell Squat</li>
+                    <li>Leg Press</li>
+                    <li>Leg Extension</li>
+                </ul>
+                <button class="btn btn-complete complete-btn" data-day="Wednesday">
+                    <i class="bi bi-check2-circle me-1"></i> Mark Complete
+                </button>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <article class="day-card rest-day" data-day="Thursday">
+                <div class="day-top">
+                    <span class="day-name">THURSDAY</span>
+                    <i class="bi bi-moon-stars"></i>
+                </div>
+                <h3>Rest & Recovery</h3>
+                <p>Give your muscles time to recover.</p>
+                <div class="workout-meta">
+                    <span><i class="bi bi-clock"></i> 20–30 min</span>
+                    <span><i class="bi bi-heart-pulse"></i> Recovery</span>
+                </div>
+                <ul>
+                    <li>Light walking</li>
+                    <li>Gentle stretching</li>
+                    <li>Quality sleep</li>
+                </ul>
+                <button class="btn btn-complete complete-btn" data-day="Thursday">
+                    <i class="bi bi-check2-circle me-1"></i> Mark Complete
+                </button>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <article class="day-card" data-day="Friday">
+                <div class="day-top">
+                    <span class="day-name">FRIDAY</span>
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+                <h3>Chest & Shoulders</h3>
+                <p>Develop your chest and shoulder strength.</p>
+                <div class="workout-meta">
+                    <span><i class="bi bi-clock"></i> 45–60 min</span>
+                    <span><i class="bi bi-fire"></i> Upper body</span>
+                </div>
+                <ul>
+                    <li>Incline Bench Press</li>
+                    <li>Shoulder Press</li>
+                    <li>Lateral Raises</li>
+                </ul>
+                <button class="btn btn-complete complete-btn" data-day="Friday">
+                    <i class="bi bi-check2-circle me-1"></i> Mark Complete
+                </button>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <article class="day-card" data-day="Saturday">
+                <div class="day-top">
+                    <span class="day-name">SATURDAY</span>
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+                <h3>Back & Hamstrings</h3>
+                <p>Train your posterior chain and back.</p>
+                <div class="workout-meta">
+                    <span><i class="bi bi-clock"></i> 50–65 min</span>
+                    <span><i class="bi bi-fire"></i> Full posterior</span>
+                </div>
+                <ul>
+                    <li>Romanian Deadlift</li>
+                    <li>Pull-Ups or Pulldown</li>
+                    <li>Leg Curl</li>
+                </ul>
+                <button class="btn btn-complete complete-btn" data-day="Saturday">
+                    <i class="bi bi-check2-circle me-1"></i> Mark Complete
+                </button>
+            </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <article class="day-card rest-day" data-day="Sunday">
+                <div class="day-top">
+                    <span class="day-name">SUNDAY</span>
+                    <i class="bi bi-moon-stars"></i>
+                </div>
+                <h3>Rest Day</h3>
+                <p>Recover, eat well, and prepare for next week.</p>
+                <div class="workout-meta">
+                    <span><i class="bi bi-clock"></i> Flexible</span>
+                    <span><i class="bi bi-heart-pulse"></i> Recovery</span>
+                </div>
+                <ul>
+                    <li>Relax and recover</li>
+                    <li>Prepare next week's plan</li>
+                    <li>Stay hydrated</li>
+                </ul>
+                <button class="btn btn-complete complete-btn" data-day="Sunday">
+                    <i class="bi bi-check2-circle me-1"></i> Mark Complete
+                </button>
+            </article>
+        </div>
+
+    </div>
+</section>
+
+<!-- Reminder -->
+<section class="container pb-5">
+    <div class="planner-tip">
+        <i class="bi bi-lightbulb"></i>
+        <div>
+            <h4>GymFit Tip</h4>
+            <p class="mb-0">
+                Start with a warm-up, use proper form, and increase weights
+                gradually. Adjust your schedule to your fitness level and recovery.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container text-center">
+        <a class="footer-brand" href="../index.html">
+            GYM<span class="text-orange">FIT</span>
+        </a>
+        <p>Build strength. Build discipline. Build yourself.</p>
+        <p class="copyright">
+            &copy; <span id="currentYear"></span> GymFit. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/planner.js"></script>
+</body>
+</html>

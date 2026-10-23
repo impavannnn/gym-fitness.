@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Membership Plans | GymFit</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/membership.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            GYM<span class="text-orange">FIT</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="workouts.html">Workouts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="planner.html">Planner</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculator.html">Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="membership.html">Membership</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="membership-hero">
+    <div class="container text-center">
+        <span class="section-tag">INVEST IN YOURSELF</span>
+        <h1>Choose Your <span>Membership</span></h1>
+        <p>
+            Find a plan that fits your goals, build healthy habits,
+            and take the next step in your fitness journey.
+        </p>
+        <a href="#plans" class="btn btn-orange mt-3">
+            Explore Plans <i class="bi bi-arrow-down ms-1"></i>
+        </a>
+    </div>
+</header>
+
+<!-- Membership plans -->
+<section class="container py-5" id="plans">
+    <div class="text-center membership-heading">
+        <span class="section-tag">SIMPLE & FLEXIBLE</span>
+        <h2>Membership <span>Plans</span></h2>
+        <p>Choose the membership that works best for you.</p>
+        <p class="demo-notice">
+            <i class="bi bi-info-circle me-1"></i>
+            Sample prices for this student project, not actual gym offers.
+        </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+        <!-- Basic -->
+        <div class="col-md-6 col-lg-4">
+            <article class="membership-card">
+                <div class="plan-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <h3>Basic</h3>
+                <p class="plan-description">A great start for beginners.</p>
+
+                <div class="price">
+                    <span class="currency">₹</span><span>799</span>
+                    <small>/ month</small>
+                </div>
+
+                <div class="plan-divider"></div>
+
+                <ul class="plan-features">
+                    <li><i class="bi bi-check-circle-fill"></i> Gym equipment access</li>
+                    <li><i class="bi bi-check-circle-fill"></i> General workout guidance</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Locker access</li>
+                    <li class="unavailable"><i class="bi bi-x-circle"></i> Personal trainer</li>
+                    <li class="unavailable"><i class="bi bi-x-circle"></i> Personal diet plan</li>
+                </ul>
+
+                <button type="button" class="btn btn-plan choose-plan"
+                        data-plan="Basic" data-price="799">
+                    Choose Basic
+                </button>
+            </article>
+        </div>
+
+        <!-- Premium -->
+        <div class="col-md-6 col-lg-4">
+            <article class="membership-card featured-plan">
+                <div class="popular-label">MOST POPULAR</div>
+
+                <div class="plan-icon">
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+                <h3>Premium</h3>
+                <p class="plan-description">For consistent fitness progress.</p>
+
+                <div class="price">
+                    <span class="currency">₹</span><span>1,499</span>
+                    <small>/ month</small>
+                </div>
+
+                <div class="plan-divider"></div>
+
+                <ul class="plan-features">
+                    <li><i class="bi bi-check-circle-fill"></i> All Basic benefits</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Personal workout guidance</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Monthly progress review</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Group fitness sessions</li>
+                    <li class="unavailable"><i class="bi bi-x-circle"></i> Personal diet plan</li>
+                </ul>
+
+                <button type="button" class="btn btn-plan choose-plan"
+                        data-plan="Premium" data-price="1499">
+                    Choose Premium
+                </button>
+            </article>
+        </div>
+
+        <!-- Elite -->
+        <div class="col-md-6 col-lg-4">
+            <article class="membership-card">
+                <div class="plan-icon">
+                    <i class="bi bi-trophy"></i>
+                </div>
+                <h3>Elite</h3>
+                <p class="plan-description">For a more personalized experience.</p>
+
+                <div class="price">
+                    <span class="currency">₹</span><span>2,499</span>
+                    <small>/ month</small>
+                </div>
+
+                <div class="plan-divider"></div>
+
+                <ul class="plan-features">
+                    <li><i class="bi bi-check-circle-fill"></i> All Premium benefits</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Personal trainer sessions</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Personalized workout plan</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Nutrition guidance</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Priority support</li>
+                </ul>
+
+                <button type="button" class="btn btn-plan choose-plan"
+                        data-plan="Elite" data-price="2499">
+                    Choose Elite
+                </button>
+            </article>
+        </div>
+
+    </div>
+</section>
+
+<!-- Benefits -->
+<section class="benefits-section py-5">
+    <div class="container">
+        <div class="text-center membership-heading">
+            <span class="section-tag">WHY GYMFIT?</span>
+            <h2>More Than <span>A Workout</span></h2>
+            <p>Build a routine that supports your long-term fitness goals.</p>
+        </div>
+
+        <div class="row g-4 mt-2">
+            <div class="col-md-6 col-lg-3">
+                <div class="benefit-card">
+                    <i class="bi bi-person-arms-up"></i>
+                    <h4>Expert Guidance</h4>
+                    <p>Learn exercises and improve your training technique.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="benefit-card">
+                    <i class="bi bi-calendar-check"></i>
+                    <h4>Flexible Routine</h4>
+                    <p>Organize your sessions around your daily schedule.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="benefit-card">
+                    <i class="bi bi-people"></i>
+                    <h4>Fitness Community</h4>
+                    <p>Stay motivated and celebrate progress together.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="benefit-card">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <h4>Track Progress</h4>
+                    <p>Build consistency and review your training milestones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Membership modal -->
+<div class="modal fade" id="membershipModal" tabindex="-1"
+     aria-labelledby="membershipModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content membership-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="membershipModalTitle">
+                    Membership Enquiry
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="modal-intro">
+                    Enter your details to prepare a sample membership enquiry.
+                </p>
+
+                <div class="selected-plan">
+                    <span>Selected Plan</span>
+                    <strong id="selectedPlanName">Premium</strong>
+                    <strong id="selectedPlanPrice">₹1,499 / month</strong>
+                </div>
+
+                <form id="membershipForm">
+                    <div class="mb-3">
+                        <label for="memberName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="memberName"
+                               maxlength="80" autocomplete="name"
+                               placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="memberEmail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="memberEmail"
+                               maxlength="254" autocomplete="email"
+                               placeholder="you@example.com" required>
+                    </div>
+
+                    <p id="membershipError" class="membership-error"
+                       role="alert" aria-live="polite"></p>
+
+                    <button type="submit" class="btn btn-orange w-100">
+                        Prepare Enquiry
+                    </button>
+                </form>
+
+                <p class="modal-note mt-3 mb-0">
+                    Demo only: no payment will be taken and no enquiry will be
+                    sent to a gym.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Enquiry confirmation -->
+<div class="modal fade" id="confirmationModal" tabindex="-1"
+     aria-labelledby="confirmationTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content membership-modal text-center">
+            <div class="modal-body p-4">
+                <div class="confirmation-icon">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <h4 id="confirmationTitle">Enquiry Prepared!</h4>
+                <p id="confirmationMessage" class="confirmation-message"></p>
+                <p class="modal-note">
+                    This is a local demonstration. Your details have not been
+                    sent to a gym or saved by this page.
+                </p>
+                <button type="button" class="btn btn-orange w-100"
+                        data-bs-dismiss="modal">
+                    Done
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container text-center">
+        <a class="footer-brand" href="../index.html">
+            GYM<span class="text-orange">FIT</span>
+        </a>
+        <p>Build strength. Build discipline. Build yourself.</p>
+        <p class="copyright">
+            &copy; <span id="currentYear"></span> GymFit. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/membership.js"></script>
+</body>
+</html>

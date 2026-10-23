@@ -1,0 +1,549 @@
+
+/* =========================
+   GYMFIT - GLOBAL STYLES
+========================= */
+
+:root {
+    --bg: #111111;
+    --bg-light: #191919;
+    --card: #202020;
+    --orange: #ff6b2c;
+    --white: #ffffff;
+    --muted: #b5b5b5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding-top: 72px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+span {
+    color: var(--orange);
+}
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-label {
+    color: var(--orange);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2,
+.display-heading,
+.membership-cta h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.gym-navbar {
+    background: rgba(17, 17, 17, 0.97);
+    border-bottom: 1px solid #292929;
+    padding: 14px 0;
+    backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+    color: var(--white) !important;
+}
+
+.navbar-brand span {
+    color: var(--orange);
+}
+
+.navbar .nav-link {
+    color: #dddddd;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--orange);
+}
+
+.navbar-toggler {
+    border-color: #555;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(255, 107, 44, 0.35);
+}
+
+.btn-orange {
+    background: var(--orange);
+    border: 2px solid var(--orange);
+    color: #111111;
+    font-weight: 700;
+    padding: 11px 22px;
+    border-radius: 5px;
+    transition: all 0.25s ease;
+}
+
+.btn-orange:hover {
+    background: transparent;
+    color: var(--orange);
+    border-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    border-radius: 5px;
+    padding: 11px 22px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 15% 45%, #292018 0%, transparent 45%),
+        var(--bg);
+}
+
+.hero-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: clamp(3.4rem, 7vw, 6.3rem);
+    line-height: 0.98;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.hero-description {
+    color: var(--muted);
+    max-width: 490px;
+    margin-top: 25px;
+    font-size: 1.05rem;
+}
+
+.hero-image-column {
+    padding: 35px 12px;
+}
+
+.hero-image {
+    min-height: 490px;
+    height: 65vh;
+    max-height: 650px;
+    position: relative;
+    border-radius: 12px;
+    background-image:
+        linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 65%),
+        url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1000&q=85");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #343434;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 107, 44, 0.12),
+        transparent 50%
+    );
+    pointer-events: none;
+}
+
+.image-badge {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    background: rgba(17, 17, 17, 0.88);
+    border: 1px solid #444;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.image-badge > i {
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.image-badge strong,
+.image-badge small {
+    display: block;
+}
+
+.image-badge small {
+    color: var(--muted);
+}
+
+.hero-stats h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.hero-stats p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+/* =========================
+   WORKOUT CARDS
+========================= */
+
+.workout-card {
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 9px;
+    background: var(--card);
+    border: 1px solid #303030;
+}
+
+.workout-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.workout-card:hover img {
+    transform: scale(1.08);
+}
+
+.workout-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.05) 75%
+    );
+    pointer-events: none;
+}
+
+.workout-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 24px;
+}
+
+.workout-card-content > span {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.workout-card h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin: 6px 0 12px;
+}
+
+.workout-card a {
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.workout-card a:hover {
+    color: var(--orange);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    background: var(--bg-light);
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    display: block;
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-image-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(17, 17, 17, 0.92);
+    padding: 16px;
+    border-left: 4px solid var(--orange);
+    border-radius: 4px;
+}
+
+.about-image-label i {
+    color: var(--orange);
+    font-size: 1.5rem;
+}
+
+.text-secondary-custom {
+    color: var(--muted);
+    margin: 22px 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 22px 0;
+}
+
+.feature-item > i {
+    color: var(--orange);
+    font-size: 1.3rem;
+    margin-top: 2px;
+}
+
+.feature-item h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.feature-item p {
+    color: var(--muted);
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   BENEFIT CARDS
+========================= */
+
+.benefit-card {
+    height: 100%;
+    padding: 35px 25px;
+    background: var(--card);
+    border: 1px solid #303030;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--orange);
+}
+
+.benefit-card > i {
+    display: inline-block;
+    font-size: 2.3rem;
+    color: var(--orange);
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.benefit-card p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+/* =========================
+   MEMBERSHIP CTA
+========================= */
+
+.membership-cta {
+    padding: 85px 0;
+    background:
+        linear-gradient(rgba(17, 17, 17, 0.91), rgba(17, 17, 17, 0.94)),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+    border-top: 1px solid #303030;
+    border-bottom: 1px solid #303030;
+}
+
+.membership-cta h2 {
+    margin-bottom: 18px;
+}
+
+.membership-cta > .container > p:not(.section-label) {
+    color: var(--muted);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.gym-footer {
+    padding: 55px 0 20px;
+    background: #0b0b0b;
+}
+
+.gym-footer h5 {
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.gym-footer a:not(.navbar-brand) {
+    display: block;
+    width: fit-content;
+    color: var(--muted);
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+
+.gym-footer a:not(.navbar-brand):hover {
+    color: var(--orange);
+}
+
+.footer-description {
+    color: var(--muted);
+    max-width: 300px;
+}
+
+.footer-line {
+    border-color: #383838;
+    margin-top: 35px;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-top: 12px;
+}
+
+.footer-bottom p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.gym-footer .back-to-top {
+    margin-bottom: 0;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 15px 0;
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+    }
+
+    .hero-content {
+        padding-top: 60px;
+    }
+
+    .hero-image-column {
+        padding-top: 0;
+    }
+
+    .hero-image {
+        height: 480px;
+        min-height: 0;
+    }
+
+    .section-padding {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    body {
+        padding-top: 66px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3rem, 14vw, 4.5rem);
+        letter-spacing: -2px;
+    }
+
+    .hero-image {
+        height: 380px;
+    }
+
+    .hero-stats h3 {
+        font-size: 1.4rem;
+    }
+
+    .workout-card {
+        height: 320px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .membership-cta {
+        padding: 60px 0;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+    }
+}
